@@ -16,11 +16,9 @@ import org.apache.commons.math3.distribution.UniformRealDistribution
 import scala.concurrent.ExecutionContext.Implicits.global
 import sample.ApiRequests._
 
-
-//val dist = new UniformRealDistribution
-//val requestTimes = Seq.fill(requestNum)(dist.sample) // Stream.continually(dist.sample).take(20)
-//val Ids = Seq.fill(bundleRepeat)(random.nextInt).toIterator
-
+/*
+ * Sample scenario runner
+ */
 object UniformHitFlow extends App with AsyncRequest {  
 
   val duration = 60 * 30 // video duration in seconds
@@ -88,5 +86,9 @@ object UniformHitFlow extends App with AsyncRequest {
       
       ResultStats.toCSV(runName)     
   }
- 
 }
+
+
+//val dist = new UniformRealDistribution
+//val requestTimes = Seq.fill(requestNum)(dist.sample) // Stream.continually(dist.sample).take(20)
+//val Ids = Seq.fill(bundleRepeat)(random.nextInt).toIterator

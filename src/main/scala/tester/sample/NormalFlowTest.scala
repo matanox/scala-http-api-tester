@@ -13,6 +13,9 @@ import scala.concurrent.Await
 import scala.util.{Try, Success, Failure}
 import scala.concurrent.duration._
 
+/*
+ * Sample scenario runner
+ */
 object NormalFlowTest extends App with AsyncRequest {  
 
   implicit val flowTracker = Tracker(4) 
